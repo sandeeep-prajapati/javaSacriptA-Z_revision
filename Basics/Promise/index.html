@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promise</title>
+    <script src="../../_src/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+    <script>
+            $.getJSON('http://jsonip.com')
+            .done(function(data){
+                $('body').append('<h1>i will appear after completion</h1>')
+            })
+            .fail(function(){
+                $('body').append('<h1>sorry i failed to load</h1>')
+            })
+            .always(function(){
+                $('body').append('<p> i Pomise i alaway will show</p>')
+            })
+    </script>
+</body>
+</html>
